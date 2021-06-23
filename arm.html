@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Control of arm report </title>
+<meta charset="UTF-8">
+
+<style>
+img { position: absolute; margin: 50px 500px 0px;}
+fieldset{ margin: 100px 50px 0px; height:370px; width:250px; border-radius:10px;
+          border: solid 1px;  color:black; background:#C3CDE6 }
+button { background: white; border-radius:10px; padding:2px 15px 2px; 
+           font:center; float:center; }
+		   
+button:hover {  background: #0066FF; } .m { margin-left:55px}
+</style>
+
+<script>
+function textvalue(val) {
+t1= document.getElementById("t1").value;
+t2= document.getElementById("t2").value;
+t3=document.getElementById("t3").value;
+t4=document.getElementById("t4").value;
+t5=document.getElementById("t5").value;
+t6=document.getElementById("t6").value;
+if (val == t1)
+{ document.getElementById("text1").value=val;}
+else if (val==t2)
+{ document.getElementById("text2").value=val;}
+else if (val==t3)
+{ document.getElementById("text3").value=val;}
+else if (val==t4)
+{ document.getElementById("text4").value=val;}
+else if (val==t5)
+{ document.getElementById("text5").value=val;}
+else if (val==t6)
+{ document.getElementById("text6").value=val;}
+}
+</script>
+
+</head>
+<body>
+<img src="methods logo.jpg">
+<form method="POST" action="reg.php">
+<fieldset>
+<legend><h4> التحكم في أذرع الروبورت</h4> </legend>
+<input type="text" maxlength="3" size="1" id="text1" > 
+<input type="range" min="0" max="180" id="t1"onchange="textvalue(this.value);" name="arm1"> محرك 1 <br><br>
+
+<input type="text" maxlength="3" size="1" id="text2" > 
+<input type="range" min="0" max="180" id="t2" onchange="textvalue(this.value);" name="arm2"> محرك 2 <br><br>
+
+<input type="text" maxlength="3" size="1" id="text3"  >
+ <input type="range" min="0" max="180" id="t3" onchange="textvalue(this.value);" name="arm3"> محرك 3 <br><br>
+ 
+<input type="text" maxlength="3" size="1" id="text4" > 
+<input type="range" min="0" max="180" id="t4" onchange="textvalue(this.value);" name="arm4"> محرك 4 <br><br>
+
+<input type="text" maxlength="3" size="1" id="text5" >
+ <input type="range" min="0" max="180" id="t5" onchange="textvalue(this.value);" name="arm5"> محرك 5 <br><br>
+ 
+<input type="text" maxlength="3" size="1" id="text6" > 
+<input type="range" min="0" max="180" id="t6" onchange="textvalue(this.value);" name="arm6"> محرك 6  <br><br>
+<br> 
+<button class="m" name="on"> تشغيل  </button> <button name="save"> حفظ </button>
+</fieldset>
+</form>
+
+</body>
+</html>
